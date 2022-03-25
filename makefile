@@ -11,12 +11,12 @@ TEST_OBJ = obj
 
 #Include Dirs
 INC_CALCULATOR = src
-INC_GTEST = /usr/local/include
+INC_GTEST = lib/gtest/include
 INCLUDES = -I$(INC_CALCULATOR) -I$(INC_GTEST)
 
 TARGET = $(BIN)
 
-GTEST_LIBS = -L/usr/local/lib64 -l:libgmock.a -l:libgtest.a -l:libgtest_main.a
+GTEST_LIBS = -Llib/gtest/lib/lib64 -l:libgmock.a -l:libgtest.a -l:libgtest_main.a
 
 BUILD_CMD = g++ $(OBJS) $(CPP_LIBS) -o $(TARGET)/helloworld $(RPATH)
 BUILD_TEST = g++ $(CPP_LIBS) $(ALL_OBJS_EXCLUDING_MAIN) $(TEST_OBJS) -o $(TARGET)/runtests $(GTEST_LIBS)
@@ -44,6 +44,10 @@ rebuild: clean build
 run: build
 	@echo "Executing..."
 	@./bin/helloworld
+
+runtests: test
+	@echo "Executing..."
+	@./bin/runtests
 
 test: $(ALL_OBJS_EXCLUDING_MAIN) $(TEST_OBJS)
 	@echo "Building tests"
