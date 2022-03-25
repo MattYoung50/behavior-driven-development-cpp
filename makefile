@@ -1,5 +1,5 @@
 CC             := g++
-CFLAGS         := -std=c++11 -Wall
+CFLAGS         := -std=c++17 -Wall
 CPP_LIBS       := -pthread
 
 #File Structure
@@ -12,7 +12,8 @@ TEST_OBJ = obj
 #Include Dirs
 INC_CALCULATOR = src
 INC_GTEST = lib/gtest/include
-INCLUDES = -I$(INC_CALCULATOR) -I$(INC_GTEST)
+INC_GUNIT = lib/gunit/include
+INCLUDES = -I$(INC_CALCULATOR) -I$(INC_GTEST) -I$(INC_GUNIT)
 
 TARGET = $(BIN)
 
