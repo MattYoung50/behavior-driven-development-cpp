@@ -13,5 +13,5 @@ TEST(CalculatorTests, ShouldReturnCorrectSumOf2Numbers) {
   uut.InputSecondNumber(8);
   uut.Add();
   uut.Equals();
-  EXPECT_EQ(uut.Result, 16);
+  EXPECT_EQ(uut.Result, 17);
 }

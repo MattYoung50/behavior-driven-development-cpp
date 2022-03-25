@@ -9,6 +9,6 @@ GTEST("Calculator Tests") {
     uut.InputSecondNumber(8);
     uut.Add();
     uut.Equals();
-    EXPECT(16 == uut.Result);
+    EXPECT(17 == uut.Result);
   }
 }
