@@ -1,9 +1,9 @@
-Feature: Calc Addition
+Feature: CalcAddition
   In order to avoid silly mistakes
   As a math idiot 
   I want to be told the sum of two numbers
 
-  Scenario Outline: Add two numbers
+  Scenario Outline: Addtwonumbers
     Given I have entered first input <input_1> into the calculator
     And I press add
     And I have entered second input <input_2> into the calculator

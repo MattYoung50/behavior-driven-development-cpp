@@ -4,7 +4,7 @@
 GTEST("Calculator Tests") {
   Calculator uut;
 
-  SHOULD("Return correct sum of 2 numbers") {
+  SHOULD("Return Correct Sum Of 2 Numbers") {
     uut.InputFirstNumber(9);
     uut.InputSecondNumber(8);
     uut.Add();
