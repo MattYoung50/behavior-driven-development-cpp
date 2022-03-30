@@ -13,14 +13,21 @@ TEST_OBJ = obj
 INC_CALCULATOR = src
 INC_GTEST = lib/gtest/include
 INC_GUNIT = lib/gunit/include
-INCLUDES = -I$(INC_CALCULATOR) -I$(INC_GTEST) -I$(INC_GUNIT)
+INC_GHERKIN = lib/gherkin/include
+INC_GHERKIN_CPP = lib/gherkin-cpp/include
+INC_FMEM = lib/fmem/include
+INC_JSON = lib/json/include -Ilib/json/include/nlohmann
+INCLUDES = -I$(INC_CALCULATOR) -I$(INC_GTEST) -I$(INC_GUNIT) -I$(INC_GHERKIN) -I$(INC_GHERKIN_CPP) -I$(INC_FMEM) -I$(INC_JSON)
 
 TARGET = $(BIN)
 
 GTEST_LIBS = -Llib/gtest/lib/lib64 -l:libgmock.a -l:libgtest.a -l:libgtest_main.a
+GHERKIN_LIBS = -Llib/gherkin/lib -l:libgherkin.a
+GHERKIN_CPP_LIBS = -Llib/gherkin-cpp/lib -l:libgherkin-cpp.a
+FMEM_LIBS = -Llib/fmem/lib -l:libfmem.a
 
 BUILD_CMD = g++ $(OBJS) $(CPP_LIBS) -o $(TARGET)/helloworld $(RPATH)
-BUILD_TEST = g++ $(CPP_LIBS) $(ALL_OBJS_EXCLUDING_MAIN) $(TEST_OBJS) -o $(TARGET)/runtests $(GTEST_LIBS)
+BUILD_TEST = g++ $(CPP_LIBS) $(ALL_OBJS_EXCLUDING_MAIN) $(TEST_OBJS) -o $(TARGET)/runtests $(FMEM_LIBS) $(GHERKIN_LIBS) $(GHERKIN_CPP_LIBS) $(GTEST_LIBS) 
 
 #Output and dependencies
 SRCS_EXCLUDING_MAIN = $(shell find $(SRC) -name *.cpp -not -name main.cpp)
