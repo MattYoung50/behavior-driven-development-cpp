@@ -1,5 +1,5 @@
 CC             := g++
-CFLAGS         := -std=c++17 -Wall
+CFLAGS         := -std=c++17 -Wall -Wextra -g
 CPP_LIBS       := -pthread
 
 #File Structure
@@ -27,7 +27,7 @@ GHERKIN_CPP_LIBS = -Llib/gherkin-cpp/lib -l:libgherkin-cpp.a
 FMEM_LIBS = -Llib/fmem/lib -l:libfmem.a
 
 BUILD_CMD = g++ $(OBJS) $(CPP_LIBS) -o $(TARGET)/helloworld $(RPATH)
-BUILD_TEST = g++ $(CPP_LIBS) $(ALL_OBJS_EXCLUDING_MAIN) $(TEST_OBJS) -o $(TARGET)/runtests $(FMEM_LIBS) $(GHERKIN_LIBS) $(GHERKIN_CPP_LIBS) $(GTEST_LIBS) 
+BUILD_TEST = g++ $(CFLAGS) $(CPP_LIBS) $(ALL_OBJS_EXCLUDING_MAIN) $(TEST_OBJS) -o $(TARGET)/runtests $(FMEM_LIBS) $(GHERKIN_LIBS) $(GHERKIN_CPP_LIBS) $(GTEST_LIBS) 
 
 #Output and dependencies
 SRCS_EXCLUDING_MAIN = $(shell find $(SRC) -name *.cpp -not -name main.cpp)
