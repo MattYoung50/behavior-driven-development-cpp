@@ -4,6 +4,16 @@
 ## References
 - This leverages [GUnit](https://github.com/cpp-testing/GUnit) to extend GTest and add [BDD](https://cucumber.io/docs/bdd/) capabilities to it
 
+## Build Calculator App
+```console
+% make build
+```
+
+## Build Tests
+```console
+% make test
+```
+
 ## Running Calculator App
 ```console
 % make run
@@ -14,15 +24,10 @@
 % make runtests
 ```
 
-## Running Calculator BDD Tests
-```console
-% make test
-% SCENARIO="test/BDD/calculator.feature" bin/runtests --gtest_filter="Calc Addition.Add two numbers"
-```
-
 ## Running All Tests
 ### Terminal
 ```console
+% make test
 % SCENARIO="test/BDD/calculator.feature" bin/runtests
 ```
 ### Debug Pane VSCode
