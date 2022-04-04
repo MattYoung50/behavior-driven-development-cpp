@@ -21,9 +21,13 @@
 ```
 
 ## Running All Tests
+### Terminal
 ```console
 % SCENARIO="test/BDD/calculator.feature" bin/runtests
 ```
+### Debug Pane VSCode
+- Click the `Run & Debug` widget on the left side
+- Click the play button beside `Debug Tests` in the top left
 
 ## Filter Tests
 ### Run CalculatorTests_GTest.cpp
