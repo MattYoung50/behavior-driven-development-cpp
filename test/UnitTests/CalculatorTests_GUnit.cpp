@@ -1,7 +1,7 @@
 #include <Calculator.h>
 #include <GUnit.h>
 
-GTEST("Calculator Tests") {
+GTEST("Calculator Tests GUnit") {
   Calculator uut;
 
   SHOULD("Return Correct Sum Of 2 Numbers") {

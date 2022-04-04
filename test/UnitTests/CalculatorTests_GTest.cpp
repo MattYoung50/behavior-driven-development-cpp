@@ -1,13 +1,13 @@
 #include <Calculator.h>
 #include <gtest/gtest.h>
 
-struct CalculatorTests : testing::Test {
+struct CalculatorTestsGTest : testing::Test {
   Calculator uut;
   void SetUp() override {}
   void TearDown() override {}
 };
 
-TEST(CalculatorTests, ShouldReturnCorrectSumOf2Numbers) {
+TEST(CalculatorTestsGTest, ShouldReturnCorrectSumOf2Numbers) {
   Calculator uut;
   uut.InputFirstNumber(9);
   uut.InputSecondNumber(8);

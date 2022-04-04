@@ -25,6 +25,20 @@
 % SCENARIO="test/BDD/calculator.feature" bin/runtests
 ```
 
+## Filter Tests
+### Run CalculatorTests_GTest.cpp
+```console
+% bin/runtests --gtest_filter="CalculatorTestsGTest.Should*"
+```
+### Run CalculatorTests_GUnit.cpp
+```console
+% bin/runtests --gtest_filter="Calculator Tests GUnit.:Return Correct*"
+```
+### Run calculator.feature
+```console
+% SCENARIO="test/BDD/calculator.feature" bin/runtests --gtest_filter="Calculator Addition.*"
+```
+
 ## Making This Repo Work in a Different Environment
 - If you want to build this in any other environment, you will have to natively compile the libs for your target environment. See console commands below
 ```console 
