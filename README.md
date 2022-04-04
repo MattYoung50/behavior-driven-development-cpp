@@ -50,14 +50,14 @@
 
 ## Making This Repo Work in a Different Environment
 - If you want to build this in any other environment, you will have to natively compile the libs for your target environment. See console commands below
-```console 
-% git clone https://github.com/cpp-testing/GUnit.git
-% cd GUnit
-% git submodule update --init --recursive
-% mkdir build && cd build
-% cmake ..
-% cmake --build . --target install
-```
+>```console 
+>% git clone https://github.com/cpp-testing/GUnit.git
+>% cd GUnit
+>% git submodule update --init --recursive
+>% mkdir build && cd build
+>% cmake ..
+>% cmake --build . --target install
+>```
 - The key libs you need are in this repo under lib
     - fmem
     - gherkin
