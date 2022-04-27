@@ -1,0 +1,116 @@
+{
+    "Header File Template": {
+        "prefix": "header",
+        "body": [
+            "#ifndef ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H",
+            "#define ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H",
+            "class $TM_FILENAME_BASE",
+            "{",
+            "private:",
+            "public:",
+            "\t$TM_FILENAME_BASE();",
+            "\tvoid foo();",
+            "};",
+            "#endif"
+        ],
+        "description": "Create Header Template"
+    },
+    "Implementation File Template": {
+        "prefix": "cpp",
+        "body": [
+            "#include \"../include/$TM_FILENAME_BASE.h\"",
+            "",
+            "$TM_FILENAME_BASE::$TM_FILENAME_BASE()",
+            "{",
+            "\t",
+            "};",
+            "",
+            "void $TM_FILENAME_BASE::foo()",
+            "{",
+            "\t",
+            "};"
+        ],
+        "description": "Create CPP Class Template"
+    },
+    "Interface Template": {
+        "prefix": "interface",
+        "body": [
+            "#ifndef ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H",
+            "#define ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H",
+            "class $TM_FILENAME_BASE",
+            "{",
+            "public:",
+            "\tint foo;",
+            "\tvirtual void bar() = 0;",
+            "\tvirtual ~$TM_FILENAME_BASE() { };",
+            "};",
+            "#endif"
+        ],
+        "description": "Create Interface Template"
+    },
+    "switch Template": {
+        "prefix": "switch",
+        "body": [
+            "switch(expression)",
+            "{",
+            "\tcase x:",
+            "\t\t// code block",
+            "\t\tbreak;",
+            "\tdefault:",
+            "\t\t// code block",
+            "};"
+        ]
+    },
+    "GUnit Test File Template": {
+        "prefix": "unit",
+        "body": [
+            "#include <string>",
+            "#include <GUnit.h>",
+            "",
+            "using namespace testing;",
+            "",
+            "GTEST(\"$TM_FILENAME_BASE Tests\")",
+            "{",
+            "\tSHOULD(\"Some Behavior that $TM_FILENAME_BASE Should/Shouldn't Have\")",
+            "\t{",
+            "\t\t// Arrange",
+            "\t\tstd::string someString = \"Hello World\";",
+            "\t\t",
+            "\t\t// Act",
+            "\t\tstd::reverse(someString.begin(), someString.end());",
+            "\t\t",
+            "\t\t// Assert",
+            "\t\tEXPECT_EQ(someString, \"dlroW olleH\");",
+            "\t}",
+            "}"
+        ],
+        "description": "Create GUnit Template"
+    },
+    "BDD Test Steps File Template": {
+        "prefix": "bdd steps",
+        "body": [
+            "#include <GUnit/GSteps.h>",
+            "#include <GUnit/GTest.h>",
+            "",
+            "using namespace testing;",
+            "",
+            "GSTEPS(\"NameOfFeatureFile*\")",
+            "{",
+            "\tGiven(\"I am step 1 that takes an argument named {n}\") = [&](int n)",
+            "\t{",
+            "\t\t// Do something with n",
+            "\t\tn++;",
+            "\t}",
+            "\tWhen(\"I am step 2 that takes no argument\") = [&]",
+            "\t{",
+            "\t\t// Do something",
+            "\t}",
+            "\tThen(\"I am step 3 that takes no argument\") = [&]",
+            "\t{",
+            "\t\t// Do something",
+            "\t}",
+            "}"
+        ],
+        "description": "Create BDD Step File Template"
+    },
+}

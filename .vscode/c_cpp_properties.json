@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${default}",
+                "${workspaceFolder}/lib",
+                "${workspaceFolder}/src/**",
+                "${workspaceFolder}/lib/gtest/include/include",
+                "${workspaceFolder}/lib/gunit/include",
+                "${workspaceFolder}/lib/**"
+            ],
+            "defines": [],
+            "compilerPath": "/opt/rh/llvm-toolset-10.0/root/usr/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-clang-x64",
+            "configurationProvider": "ms-vscode.makefile-tools"
+        }
+    ],
+    "version": 4
+}

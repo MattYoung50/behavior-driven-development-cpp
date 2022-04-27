@@ -12,7 +12,8 @@
             "program": "${workspaceFolder}/bin/runtests",
             "MIMode": "gdb",
             "miDebuggerPath": "/usr/bin/gdb",
-            "envFile": "${workspaceFolder}/bdd.env"
+            "envFile": "${workspaceFolder}/bdd.env",
+            "preLaunchTask": "Build Tests"
         }
     ]
 }
