@@ -15,7 +15,7 @@ public:
   MOCK_METHOD(void, bar, (), (override));
 };
 
-GTEST("Calculator Tests GUnit Add") {
+GTEST("Calculator Tests GUnit") {
   Calculator uut;
 
   SHOULD("Return Correct Sum Of 9 + 8") {
@@ -26,11 +26,11 @@ GTEST("Calculator Tests GUnit Add") {
     EXPECT(17 == uut.Result);
   }
 
-  SHOULD("Return Correct Sum Of  9 + 9") {
+  SHOULD("Return Correct Difference Of 9 - 8") {
     uut.InputFirstNumber(9);
-    uut.InputSecondNumber(9);
-    uut.Add();
+    uut.InputSecondNumber(8);
+    uut.Subtract();
     uut.Equals();
-    EXPECT(18 == uut.Result);
+    EXPECT(1 == uut.Result);
   }
 }
