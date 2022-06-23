@@ -28,7 +28,7 @@
 >### Terminal
 >```console
 >% make test
->% SCENARIO="test/BDD/calculator.feature" bin/runtests
+>% SCENARIO="test/BDD/calculator.feature" make runtests
 >```
 >### Debug Pane VSCode
 >- Click the `Run & Debug` widget on the left side

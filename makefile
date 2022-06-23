@@ -21,7 +21,7 @@ INCLUDES = -I$(INC_CALCULATOR) -I$(INC_GTEST) -I$(INC_GUNIT) -I$(INC_GHERKIN) -I
 
 TARGET = $(BIN)
 
-GTEST_LIBS = -Llib/gtest/lib/lib64 -l:libgmock.a -l:libgtest.a -l:libgtest_main.a
+GTEST_LIBS = -Llib/gtest/lib -l:libgmock.a -l:libgtest.a -l:libgtest_main.a
 GHERKIN_LIBS = -Llib/gherkin/lib -l:libgherkin.a
 GHERKIN_CPP_LIBS = -Llib/gherkin-cpp/lib -l:libgherkin-cpp.a
 FMEM_LIBS = -Llib/fmem/lib -l:libfmem.a
