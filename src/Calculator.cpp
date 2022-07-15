@@ -34,7 +34,7 @@ void Calculator::Equals()
     }  
     else
     {
-        Result = -1;
+        Result = 0;
     }
     _action = Button::Equals;
 }

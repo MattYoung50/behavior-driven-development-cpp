@@ -1,9 +1,9 @@
 #pragma once
 
 enum Button {
-    Add = 0,
+    Equals = 0,
     Subtract = 1,
-    Equals = 2
+    Add = 2
 };
 
 class Calculator {
