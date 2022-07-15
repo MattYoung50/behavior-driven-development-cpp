@@ -1,12 +1,12 @@
 {
     "C_Cpp.clang_format_path": "/usr/local/bin/clang-format",
-    "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+    "C_Cpp.codeAnalysis.clangTidy.enabled": false,
     "C_Cpp.codeAnalysis.exclude": {
         "lib/": true,
         "lib/**/*.hpp": true,
         "lib/**/*.h": true,
     },
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "editor.snippetSuggestions": "top",
     "files.associations": {
         "array": "cpp",
